@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PrimeEstate | Real Estate Management</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+        <div class="container nav-container">
+
+            <a href="#" class="logo">
+                Prime<span>Estate</span>
+            </a>
+
+            <nav id="navMenu">
+                <a href="#home">Home</a>
+                <a href="#properties">Properties</a>
+                <a href="#services">Services</a>
+                <a href="#about">About Us</a>
+                <a href="#referral">Referral</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <button class="nav-btn" onclick="openReferral()">
+                Become a Referral
+            </button>
+
+            <button class="menu-toggle" onclick="toggleMenu()">
+                ☰
+            </button>
+
+        </div>
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-overlay"></div>
+
+        <div class="container hero-content">
+
+            <div class="hero-text">
+
+                <p class="small-title">
+                    PREMIUM REAL ESTATE MANAGEMENT
+                </p>
+
+                <h1>
+                    Find Your Place.
+                    <span>Manage Your Future.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Discover exceptional properties and professional real estate
+                    management solutions designed to make property ownership
+                    simple, secure and profitable.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#properties" class="primary-btn">
+                        Explore Properties
+                    </a>
+
+                    <button class="secondary-btn" onclick="openReferral()">
+                        Become a Referral
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- Search Box -->
+
+            <div class="property-search">
+
+                <div class="search-item">
+                    <label>Location</label>
+                    <input type="text" placeholder="e.g. Lagos, Abuja">
+                </div>
+
+                <div class="search-item">
+                    <label>Property Type</label>
+
+                    <select>
+                        <option>Any Property</option>
+                        <option>Apartment</option>
+                        <option>Duplex</option>
+                        <option>Office</option>
+                        <option>Land</option>
+                    </select>
+
+                </div>
+
+                <div class="search-item">
+                    <label>Price Range</label>
+
+                    <select>
+                        <option>Any Price</option>
+                        <option>₦10m - ₦30m</option>
+                        <option>₦30m - ₦70m</option>
+                        <option>₦70m - ₦150m</option>
+                        <option>₦150m+</option>
+                    </select>
+
+                </div>
+
+                <button class="search-btn" onclick="searchProperties()">
+                    Search
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= STATS ================= -->
+
+    <section class="stats">
+
+        <div class="container stats-container">
+
+            <div class="stat">
+                <h2>500+</h2>
+                <p>Properties Managed</p>
+            </div>
+
+            <div class="stat">
+                <h2>1,200+</h2>
+                <p>Happy Clients</p>
+            </div>
+
+            <div class="stat">
+                <h2>8+</h2>
+                <p>Years Experience</p>
+            </div>
+
+            <div class="stat">
+                <h2>98%</h2>
+                <p>Client Satisfaction</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PROPERTIES ================= -->
+
+    <section class="properties section" id="properties">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="section-label">FEATURED PROPERTIES</p>
+
+                    <h2>
+                        Properties Designed
+                        <span>For Better Living</span>
+                    </h2>
+                </div>
+
+                <a href="#" class="view-all">
+                    View All Properties →
+                </a>
+
+            </div>
+
+
+            <div class="property-grid">
+
+                <!-- Property 1 -->
+
+                <article class="property-card">
+
+                    <div class="property-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=80"
+                            alt="Luxury modern house"
+                        >
+
+                        <span class="property-tag">
+                            FOR SALE
+                        </span>
+
+                    </div>
+
+                    <div class="property-info">
+
+                        <p class="location">
+                            📍 Lekki Phase 1, Lagos
+                        </p>
+
+                        <h3>Modern Luxury Duplex</h3>
+
+                        <p class="property-description">
+                            Contemporary 5-bedroom duplex with spacious
+                            interiors and premium finishes.
+                        </p>
+
+                        <div class="property-details">
+                            <span>🛏 5 Beds</span>
+                            <span>🛁 4 Baths</span>
+                            <span>📐 650 m²</span>
+                        </div>
+
+                        <div class="property-bottom">
+
+                            <strong>₦185,000,000</strong>
+
+                            <button onclick="showProperty('Modern Luxury Duplex')">
+                                View Details
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Property 2 -->
+
+                <article class="property-card">
+
+                    <div class="property-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=80"
+                            alt="Luxury apartment"
+                        >
+
+                        <span class="property-tag">
+                            FOR RENT
+                        </span>
+
+                    </div>
+
+                    <div class="property-info">
+
+                        <p class="location">
+                            📍 Ikoyi, Lagos
+                        </p>
+
+                        <h3>Luxury City Apartment</h3>
+
+                        <p class="property-description">
+                            Elegant serviced apartment located in one of
+                            Lagos' most prestigious neighborhoods.
+                        </p>
+
+                        <div class="property-details">
+                            <span>🛏 3 Beds</span>
+                            <span>🛁 3 Baths</span>
+                            <span>📐 280 m²</span>
+                        </div>
+
+                        <div class="property-bottom">
+
+                            <strong>₦12,000,000 / Year</strong>
+
+                            <button onclick="showProperty('Luxury City Apartment')">
+                                View Details
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Property 3 -->
+
+                <article class="property-card">
+
+                    <div class="property-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80"
+                            alt="Modern family home"
+                        >
+
+                        <span class="property-tag">
+                            FOR SALE
+                        </span>
+
+                    </div>
+
+                    <div class="property-info">
+
+                        <p class="location">
+                            📍 Abuja, Nigeria
+                        </p>
+
+                        <h3>Contemporary Family Home</h3>
+
+                        <p class="property-description">
+                            Spacious family residence featuring a private
+                            compound, modern kitchen and beautiful interiors.
+                        </p>
+
+                        <div class="property-details">
+                            <span>🛏 4 Beds</span>
+                            <span>🛁 4 Baths</span>
+                            <span>📐 500 m²</span>
+                        </div>
+
+                        <div class="property-bottom">
+
+                            <strong>₦120,000,000</strong>
+
+                            <button onclick="showProperty('Contemporary Family Home')">
+                                View Details
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SERVICES ================= -->
+
+    <section class="services section" id="services">
+
+        <div class="container">
+
+            <div class="center-heading">
+
+                <p class="section-label">
+                    WHAT WE DO
+                </p>
+
+                <h2>
+                    Complete Real Estate
+                    <span>Management Solutions</span>
+                </h2>
+
+                <p>
+                    From finding the right property to managing your investment,
+                    our team provides professional solutions throughout the
+                    entire property lifecycle.
+                </p>
+
+            </div>
+
+
+            <div class="services-grid">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                       <i class="fa-solid fa-building"></i> 
+                    </div>
+
+                    <h3>Property Management</h3>
+
+                    <p>
+                        Professional management of residential and commercial
+                        properties, including maintenance and tenant support.
+                    </p>
+
+                    <a href="#">Learn More →</a>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="fa-solid fa-key"></i>
+                    </div>
+
+                    <h3>Property Sales</h3>
+
+                    <p>
+                        We connect property owners with verified buyers while
+                        providing a smooth and transparent sales process.
+                    </p>
+
+                    <a href="#">Learn More →</a>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                       <i class="fa-solid fa-chart-line"></i> 
+                    </div>
+
+                    <h3>Investment Advisory</h3>
+
+                    <p>
+                        Get professional insights to help you understand
+                        property opportunities and investment strategies.
+                    </p>
+
+                    <a href="#">Learn More →</a>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+
+                    <h3>Property Maintenance</h3>
+
+                    <p>
+                        Reliable maintenance services that help protect the
+                        value and condition of your property.
+                    </p>
+
+                    <a href="#">Learn More →</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about section" id="about">
+
+        <div class="container about-container">
+
+            <div class="about-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1000&q=80"
+                    alt="Real estate agent"
+                >
+
+                <div class="experience-box">
+
+                    <strong>8+</strong>
+
+                    <span>
+                        Years of
+                        <br>
+                        Experience
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="about-content">
+
+                <p class="section-label">
+                    ABOUT PRIMEESTATE
+                </p>
+
+                <h2>
+                    Building Better
+                    <span>Property Experiences</span>
+                </h2>
+
+                <p>
+                    PrimeEstate is a modern real estate management company
+                    focused on helping property owners, investors and tenants
+                    make better property decisions.
+                </p>
+
+                <p>
+                    Our team combines market knowledge, technology and
+                    professional property management to create a reliable
+                    experience for our clients.
+                </p>
+
+                <div class="check-list">
+
+                    <p>✓ Verified property listings</p>
+                    <p>✓ Professional property management</p>
+                    <p>✓ Transparent transactions</p>
+                    <p>✓ Dedicated customer support</p>
+
+                </div>
+
+                <a href="#contact" class="primary-btn">
+                    Contact Our Team
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= REFERRAL ================= -->
+
+    <section class="referral section" id="referral">
+
+        <div class="container referral-container">
+
+            <div class="referral-content">
+
+                <p class="section-label">
+                    PRIMEESTATE REFERRAL PROGRAM
+                </p>
+
+                <h2>
+                    Know Someone Looking
+                    <span>For Property?</span>
+                </h2>
+
+                <p>
+                    Refer potential property buyers, tenants or investors to
+                    PrimeEstate and become part of our referral network.
+                </p>
+
+                <div class="referral-benefits">
+
+                    <div>
+                        <strong>01</strong>
+                        <p>Register as a referral partner</p>
+                    </div>
+
+                    <div>
+                        <strong>02</strong>
+                        <p>Send qualified property leads</p>
+                    </div>
+
+                    <div>
+                        <strong>03</strong>
+                        <p>Track your referrals with our team</p>
+                    </div>
+
+                </div>
+
+                <button class="referral-btn" onclick="openReferral()">
+                    Register as a Referral →
+                </button>
+
+            </div>
+
+
+            <div class="referral-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=80"
+                    alt="Real estate team"
+                >
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= TESTIMONIAL ================= -->
+
+    <section class="testimonials section">
+
+        <div class="container">
+
+            <div class="center-heading">
+
+                <p class="section-label">
+                    CLIENT STORIES
+                </p>
+
+                <h2>
+                    What Our Clients
+                    <span>Say About Us</span>
+                </h2>
+
+            </div>
+
+
+            <div class="testimonial-grid">
+
+                <div class="testimonial">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        "PrimeEstate made the process of finding my new home
+                        incredibly simple. Their team was professional from
+                        start to finish."
+                    </p>
+
+                    <h4>David A.</h4>
+                    <small>Property Buyer</small>
+
+                </div>
+
+
+                <div class="testimonial">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        "Their property management team has taken a huge
+                        responsibility off my shoulders. Communication has
+                        always been excellent."
+                    </p>
+
+                    <h4>Sarah O.</h4>
+                    <small>Property Owner</small>
+
+                </div>
+
+
+                <div class="testimonial">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        "I was able to find a suitable investment property
+                        after getting clear information from their advisors."
+                    </p>
+
+                    <h4>Michael K.</h4>
+                    <small>Investor</small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CTA ================= -->
+
+    <section class="cta" id="contact">
+
+        <div class="container cta-content">
+
+            <p class="section-label">
+                LET'S WORK TOGETHER
+            </p>
+
+            <h2>
+                Ready to Make Your
+                <span>Next Property Move?</span>
+            </h2>
+
+            <p>
+                Whether you're buying, selling, renting or managing property,
+                our team is ready to help.
+            </p>
+
+            <div>
+
+                <a href="mailto:info@primeestate.com" class="primary-btn">
+                    Contact Us
+                </a>
+
+                <button class="secondary-btn dark" onclick="openReferral()">
+                    Join Referral Program
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="container footer-container">
+
+            <div class="footer-about">
+
+                <a href="#" class="logo">
+                    Prime<span>Estate</span>
+                </a>
+
+                <p>
+                    Professional real estate management and property
+                    solutions for modern investors, owners and tenants.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>Company</h4>
+
+                <a href="#about">About Us</a>
+                <a href="#services">Services</a>
+                <a href="#properties">Properties</a>
+                <a href="#contact">Contact</a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>Services</h4>
+
+                <a href="#">Property Management</a>
+                <a href="#">Property Sales</a>
+                <a href="#">Investment Advisory</a>
+                <a href="#">Maintenance</a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>Contact</h4>
+
+                <p>📍 Lagos, Nigeria</p>
+                <p>📞 +234 800 000 0000</p>
+                <p>✉ info@primeestate.com</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            <p>
+                © 2026 PrimeEstate. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= REFERRAL MODAL ================= -->
+
+    <div class="modal" id="referralModal">
+
+        <div class="modal-content">
+
+            <button class="close-btn" onclick="closeReferral()">
+                ×
+            </button>
+
+            <div class="modal-header">
+
+                <p class="section-label">
+                    REFERRAL PROGRAM
+                </p>
+
+                <h2>
+                    Become a Referral Partner
+                </h2>
+
+                <p>
+                    Fill in your details and our team will contact you.
+                </p>
+
+            </div>
+
+
+            <form id="referralForm">
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label>First Name</label>
+
+                        <input
+                            type="text"
+                            id="firstName"
+                            placeholder="Enter your first name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Last Name</label>
+
+                        <input
+                            type="text"
+                            id="lastName"
+                            placeholder="Enter your last name"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Email Address</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="you@example.com"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Phone Number</label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="+234 800 000 0000"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Referral Type</label>
+
+                    <select id="referralType" required>
+
+                        <option value="">
+                            Select referral type
+                        </option>
+
+                        <option>
+                            Property Buyer
+                        </option>
+
+                        <option>
+                            Property Tenant
+                        </option>
+
+                        <option>
+                            Property Owner
+                        </option>
+
+                        <option>
+                            Investor
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>How did you hear about us?</label>
+
+                    <select>
+
+                        <option>Social Media</option>
+                        <option>Friend / Family</option>
+                        <option>Website</option>
+                        <option>Google</option>
+                        <option>Other</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Additional Message</label>
+
+                    <textarea
+                        placeholder="Tell us anything else we should know..."
+                    ></textarea>
+
+                </div>
+
+
+                <label class="terms">
+
+                    <input type="checkbox" required>
+
+                    I agree to be contacted by PrimeEstate regarding the
+                    referral program.
+
+                </label>
+
+
+                <button type="submit" class="submit-btn">
+                    Submit Registration
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= SUCCESS MESSAGE ================= -->
+
+    <div class="success-message" id="successMessage">
+
+        <div class="success-box">
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <h2>Registration Submitted!</h2>
+
+            <p>
+                Thank you for registering as a referral partner.
+                Our team will contact you shortly.
+            </p>
+
+            <button onclick="closeSuccess()">
+                Done
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
